@@ -19,6 +19,11 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.down * parallaxSpeed * Time.deltaTime);
+
+        if(transform.position.y < startPos.y - spriteHeight)
+        {
+            transform .position = startPos;
+        }
     }
 }
