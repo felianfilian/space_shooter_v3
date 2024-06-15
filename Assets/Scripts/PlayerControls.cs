@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -14,5 +15,15 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnEnable()
+    {
+        EnhancedTouchSupport.Enable();
+    }
+
+    private void OnDisable()
+    {
+        EnhancedTouchSupport.Disable();
     }
 }
