@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class PlayerControls : MonoBehaviour
     {
         if (Touch.fingers[0].isActive)
         {
-
+            Touch myTouch = Touch.activeTouches[0];
+            Vector3 touchPos = myTouch.screenPosition;
+            touchPos = Camera.main.ScreenToWorldPoint(touchPos);
         }
     }
 
