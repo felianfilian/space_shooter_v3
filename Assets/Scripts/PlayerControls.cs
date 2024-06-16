@@ -6,10 +6,11 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerControls : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Camera mainCam;
+
     void Start()
     {
-        
+        mainCam = Camera.main;
     }
 
     // Update is called once per frame
@@ -19,7 +20,8 @@ public class PlayerControls : MonoBehaviour
         {
             Touch myTouch = Touch.activeTouches[0];
             Vector3 touchPos = myTouch.screenPosition;
-            touchPos = Camera.main.ScreenToWorldPoint(touchPos);
+            touchPos = mainCam.ScreenToWorldPoint(touchPos);
+            transform.position = new Vector3(touchPos.x, touchPos.y, 0);
         }
     }
 
