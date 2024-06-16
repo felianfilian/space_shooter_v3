@@ -14,7 +14,10 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Touch.fingers[0].isActive)
+        {
+
+        }
     }
 
     private void OnEnable()
