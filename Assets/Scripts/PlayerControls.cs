@@ -20,11 +20,7 @@ public class PlayerControls : MonoBehaviour
     {
         mainCam = Camera.main;
 
-        maxLeft = mainCam.ViewportToWorldPoint(new Vector2(0.15f, 0)).x;
-        maxRight = mainCam.ViewportToWorldPoint(new Vector2(0.85f, 0)).x;
-
-        maxDown = mainCam.ViewportToWorldPoint(new Vector2(0, 0.15f)).y;
-        maxUp = mainCam.ViewportToWorldPoint(new Vector2(0, 0.85f)).y;
+        StartCoroutine(SetBoundries());
     }
 
     // Update is called once per frame
@@ -57,5 +53,16 @@ public class PlayerControls : MonoBehaviour
     private void OnDisable()
     {
         EnhancedTouchSupport.Disable();
+    }
+
+    private IEnumerator SetBoundries()
+    {
+        yield return new WaitForEndOfFrame();
+
+        maxLeft = mainCam.ViewportToWorldPoint(new Vector2(0.15f, 0)).x;
+        maxRight = mainCam.ViewportToWorldPoint(new Vector2(0.85f, 0)).x;
+
+        maxDown = mainCam.ViewportToWorldPoint(new Vector2(0, 0.08f)).y;
+        maxUp = mainCam.ViewportToWorldPoint(new Vector2(0, 0.92f)).y;
     }
 }
