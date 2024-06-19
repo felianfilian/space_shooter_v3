@@ -9,7 +9,7 @@ using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] private InputActionReference moveAction;
-    [SerializeField] private float speed;
+   //  [SerializeField] private float speed;
 
     private Camera mainCam;
     private Vector3 offset;
@@ -23,7 +23,7 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         mainCam = Camera.main;
-        speed = 8;
+        // speed = 8;
 
         StartCoroutine(SetBoundries());
     }

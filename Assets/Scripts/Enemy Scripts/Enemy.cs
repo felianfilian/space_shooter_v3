@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float health;
+    [SerializeField] protected float health;
 
     void Start()
     {
