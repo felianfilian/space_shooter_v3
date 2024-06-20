@@ -15,4 +15,14 @@ public class Metroid : Enemy
     {
         
     }
+
+    public override void HurtSequence()
+    {
+        
+    }
+
+    public override void DeathSequence()
+    {
+        
+    }
 }
