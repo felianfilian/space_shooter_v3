@@ -14,11 +14,21 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         health -= dmg;
-        // hurt animation
+        HurtSequence();
         if(health <= 0)
         {
             health = 0;
-            // destroy animation
+            DeathSequence();
         }
+    }
+
+    public virtual void HurtSequence()
+    {
+
+    }
+
+    public virtual void DeathSequence()
+    {
+
     }
 }
