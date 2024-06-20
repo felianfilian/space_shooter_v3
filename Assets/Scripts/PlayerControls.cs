@@ -44,15 +44,19 @@ public class PlayerControls : MonoBehaviour
 
 
                 Vector3 touchPos = myTouch.screenPosition;
-                touchPos = mainCam.ScreenToWorldPoint(touchPos);
 
-                if (Touch.activeTouches[0].phase == TouchPhase.Began)
+                if (touchPos.x >= 0 && touchPos.x <= Screen.width && touchPos.y >= 0 && touchPos.y <= Screen.height)
                 {
-                    offset = touchPos - transform.position;
-                }
-                if (Touch.activeTouches[0].phase == TouchPhase.Moved || Touch.activeTouches[0].phase == TouchPhase.Stationary)
-                {
-                    transform.position = new Vector3(touchPos.x - offset.x, touchPos.y - offset.y, 0);
+                    touchPos = mainCam.ScreenToWorldPoint(touchPos);
+
+                    if (Touch.activeTouches[0].phase == TouchPhase.Began)
+                    {
+                        offset = touchPos - transform.position;
+                    }
+                    if (Touch.activeTouches[0].phase == TouchPhase.Moved || Touch.activeTouches[0].phase == TouchPhase.Stationary)
+                    {
+                        transform.position = new Vector3(touchPos.x - offset.x, touchPos.y - offset.y, 0);
+                    }
                 }
             }
 
