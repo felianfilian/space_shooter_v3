@@ -6,9 +6,11 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] protected float health;
 
+    protected Rigidbody2D rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(float dmg)

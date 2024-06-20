@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Metroid : Enemy
 {
-    // Start is called before the first frame update
+
+    [SerializeField] private float minSpeed;
+    [SerializeField] private float maxSpeed;
+    private float speed;
+
     void Start()
     {
-        
+        minSpeed = 8;
+        maxSpeed = 15;
+        speed = Random.Range(minSpeed, maxSpeed);
+
+        rb.velocity = Vector2.down * speed;
     }
 
     // Update is called once per frame
