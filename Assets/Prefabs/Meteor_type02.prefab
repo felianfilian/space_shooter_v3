@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2408567521089698079}
   - component: {fileID: 7734557671588434760}
   - component: {fileID: 5475293390047620853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Meteor_type02
   m_TagString: Enemy
   m_Icon: {fileID: 0}

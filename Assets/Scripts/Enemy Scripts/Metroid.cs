@@ -43,4 +43,9 @@ public class Metroid : Enemy
         }
         
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
