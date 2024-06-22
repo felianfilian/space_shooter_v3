@@ -5,24 +5,30 @@ using UnityEngine;
 public class BulletControl : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    [SerializeField] private GameObject spawnPosition;
-    [SerializeField] private float shotInterval;
+    [SerializeField] private Transform spawnPosition;
+    [SerializeField] private float shootInterval;
 
-    private float shotTimer;
+    private float shootTimer;
 
     void Start()
     {
-        shotTimer = shotInterval;
+        shootTimer = shootInterval;
     }
 
     // Update is called once per frame
     void Update()
     {
-        shotTimer -= Time.deltaTime;
+        shootTimer -= Time.deltaTime;
 
-        if(shotTimer <= 0)
+        if(shootTimer <= 0)
         {
-            shotTimer = shotInterval;
+            shootTimer = shootInterval;
         }
+    }
+
+    public void Shoot()
+    {
+        Instantiate(bullet, spawnPosition.position, Quaternion.identity);
+            
     }
 }
