@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562809181b21d334f9057bd85b11579f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 1980497163553642206, guid: 4a8a3a34952779c4ebcb2104aed189fa, type: 3}
   spawnPosition: {fileID: 602719295}
   shootInterval: 0.3
 --- !u!1 &298612320

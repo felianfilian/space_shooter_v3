@@ -22,6 +22,7 @@ public class BulletControl : MonoBehaviour
 
         if(shootTimer <= 0)
         {
+            Shoot();
             shootTimer = shootInterval;
         }
     }
