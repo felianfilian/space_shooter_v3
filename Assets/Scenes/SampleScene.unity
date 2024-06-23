@@ -195,7 +195,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1980497163553642206, guid: 4a8a3a34952779c4ebcb2104aed189fa, type: 3}
   spawnPosition: {fileID: 602719295}
-  shootInterval: 0.3
+  shootInterval: 0.5
+--- !u!114 &204276487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204276479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f446a6a686da8354e9ea5ae2eab6acf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
 --- !u!1 &298612320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1756,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2581130596863128723, guid: 325dd4fabb14de947bbb018d2f1573c3, type: 3}
       insertIndex: 3
       addedObject: {fileID: 204276486}
+    - targetCorrespondingSourceObject: {fileID: 2581130596863128723, guid: 325dd4fabb14de947bbb018d2f1573c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 204276487}
   m_SourcePrefab: {fileID: 100100000, guid: 325dd4fabb14de947bbb018d2f1573c3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

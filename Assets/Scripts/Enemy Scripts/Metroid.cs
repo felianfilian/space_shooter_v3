@@ -41,7 +41,9 @@ public class Metroid : Enemy
     {
         if(collision.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
+            PlayerStats player = collision.GetComponent<PlayerStats>();
+            player.PlayerDamage(damage);
+            Destroy(gameObject);
         }
         
     }
