@@ -102,6 +102,7 @@ MonoBehaviour:
   health: 1
   rb: {fileID: 8597292213361270421}
   damage: 1
+  explosionEffect: {fileID: 5140859424900139106, guid: f82fd90a54ab3e447b19ddd54ebf3157, type: 3}
   minSpeed: 8
   maxSpeed: 12
   rotateSpeed: 0

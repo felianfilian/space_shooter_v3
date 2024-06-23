@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private Image healthAmount;
+    [SerializeField] private GameObject explosionEffect;
 
     private float health;
 
@@ -21,6 +22,7 @@ public class PlayerStats : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         healthAmount.fillAmount = health / maxHealth;

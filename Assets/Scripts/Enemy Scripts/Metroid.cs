@@ -34,6 +34,7 @@ public class Metroid : Enemy
 
     public override void DeathSequence()
     {
+        Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
@@ -43,6 +44,7 @@ public class Metroid : Enemy
         {
             PlayerStats player = collision.GetComponent<PlayerStats>();
             player.PlayerDamage(damage);
+            Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         
