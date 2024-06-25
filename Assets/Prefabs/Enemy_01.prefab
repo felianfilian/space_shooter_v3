@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 5777276886921822022}
   - component: {fileID: 1227711667246099394}
   - component: {fileID: 922823552942206833}
+  - component: {fileID: 4616307873734136277}
   m_Layer: 0
   m_Name: Enemy_01
   m_TagString: Untagged
@@ -344,3 +345,24 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 8406063485804669070}
+--- !u!114 &4616307873734136277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406063485804669070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2abebfc482f318d418f3974d090d0d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  rb: {fileID: 1753568189348994588}
+  damage: 1
+  explosionEffect: {fileID: 5140859424900139106, guid: f82fd90a54ab3e447b19ddd54ebf3157, type: 3}
+  speed: 5
+  shootInterval: 2
+  leftCanonSpawn: {fileID: 3380843628756019971}
+  rightCanonSpawn: {fileID: 8315865448723690444}
+  bullet: {fileID: 1980497163553642206, guid: 4a8a3a34952779c4ebcb2104aed189fa, type: 3}

@@ -28,4 +28,30 @@ public class Enemy01 : Enemy
             shootTImer = 0;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<PlayerStats>().PlayerDamage(damage);
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
+
+    public override void HurtSequence()
+    {
+        
+    }
+
+    public override void DeathSequence()
+    {
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
