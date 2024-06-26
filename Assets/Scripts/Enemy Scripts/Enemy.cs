@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 

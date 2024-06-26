@@ -41,7 +41,7 @@ public class Enemy01 : Enemy
 
     public override void HurtSequence()
     {
-        
+        anim.SetTrigger("damage");
     }
 
     public override void DeathSequence()
