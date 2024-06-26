@@ -41,6 +41,9 @@ public class Enemy01 : Enemy
 
     public override void HurtSequence()
     {
+        if(anim.GetCurrentAnimatorStateInfo(0).IsTag("dmg")) {
+            return;
+        }
         anim.SetTrigger("damage");
     }
 
