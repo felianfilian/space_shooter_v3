@@ -361,8 +361,8 @@ MonoBehaviour:
   rb: {fileID: 1753568189348994588}
   damage: 1
   explosionEffect: {fileID: 5140859424900139106, guid: f82fd90a54ab3e447b19ddd54ebf3157, type: 3}
-  speed: 5
-  shootInterval: 2
+  speed: 2
+  shootInterval: 1
   leftCanonSpawn: {fileID: 3380843628756019971}
   rightCanonSpawn: {fileID: 8315865448723690444}
-  bullet: {fileID: 1980497163553642206, guid: 4a8a3a34952779c4ebcb2104aed189fa, type: 3}
+  bullet: {fileID: 8910179282267094823, guid: 97712d980ded74641858a6a46468a670, type: 3}

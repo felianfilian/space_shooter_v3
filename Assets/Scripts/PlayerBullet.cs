@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserBullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float damage;
@@ -17,7 +17,11 @@ public class LaserBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
-        enemy.TakeDamage(damage);
+        if(enemy != null)
+        {
+            enemy.TakeDamage(damage);
+        }
+        
         Destroy(gameObject);
     }
 

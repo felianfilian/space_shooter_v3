@@ -211,7 +211,7 @@ MonoBehaviour:
   maxHealth: 3
   healthAmount: {fileID: 1399948967}
   explosionEffect: {fileID: 5140859424900139106, guid: f82fd90a54ab3e447b19ddd54ebf3157, type: 3}
-  anim: {fileID: 0}
+  anim: {fileID: 204276488}
 --- !u!95 &204276488
 Animator:
   serializedVersion: 5
@@ -2169,13 +2169,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4616307873734136277, guid: 2b87d9d5b650adc4c9256a9d88d31b52, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616307873734136277, guid: 2b87d9d5b650adc4c9256a9d88d31b52, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 8910179282267094823, guid: 97712d980ded74641858a6a46468a670, type: 3}
+    - target: {fileID: 4616307873734136277, guid: 2b87d9d5b650adc4c9256a9d88d31b52, type: 3}
+      propertyPath: shootInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8040895984506626341, guid: 2b87d9d5b650adc4c9256a9d88d31b52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.019087315
       objectReference: {fileID: 0}
     - target: {fileID: 8040895984506626341, guid: 2b87d9d5b650adc4c9256a9d88d31b52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6610137
+      value: 5.8389864
       objectReference: {fileID: 0}
     - target: {fileID: 8040895984506626341, guid: 2b87d9d5b650adc4c9256a9d88d31b52, type: 3}
       propertyPath: m_LocalPosition.z
