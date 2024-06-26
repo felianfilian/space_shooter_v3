@@ -8,6 +8,8 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private Rigidbody2D rb;
 
+    private Enemy enemy;
+
 
     void Start()
     {
@@ -16,7 +18,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.GetComponent<Enemy>();
+        enemy = collision.GetComponent<Enemy>();
         if(enemy != null)
         {
             enemy.TakeDamage(damage);
