@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] protected float health;
-
+    [SerializeField] protected Animator anim;
     [SerializeField] protected Rigidbody2D rb;
-    [SerializeField] protected float damage;
     [SerializeField] protected GameObject explosionEffect;
+
+    [SerializeField] protected float damage;
+    [SerializeField] protected float health;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
