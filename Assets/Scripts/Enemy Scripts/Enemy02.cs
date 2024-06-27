@@ -6,30 +6,21 @@ using UnityEngine;
 public class Enemy02: Enemy
 {
     [Header("Main Stats")]
-    [SerializeField] private float minSpeed;
-    [SerializeField] private float maxSpeed;
-    [SerializeField] private float rotateSpeed;
-    private float speed;
+    [SerializeField] private float speed;
 
     void Start()
     {
-        minSpeed = 6;
-        maxSpeed = 12;
-        rotateSpeed = 80;
-        speed = Random.Range(minSpeed, maxSpeed);
-
         rb.velocity = Vector2.down * speed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
-    }
 
     public override void HurtSequence()
     {
-        
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("dmg"))
+        {
+            return;
+        }
+        anim.SetTrigger("damage");
     }
 
     public override void DeathSequence()
