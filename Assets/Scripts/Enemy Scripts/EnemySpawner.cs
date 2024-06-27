@@ -5,22 +5,21 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    
-
     [Header("Enemy Prefabs")]
     [SerializeField] GameObject[] enemy;
     [Space(15)]
-    [SerializeField] private float spawnCounter;
+    [SerializeField] private float spawnTime;
 
     private Camera mainCam;
     private float maxLeft;
     private float maxRight;
     private float yPos;
-    private float spawnTimer;
+    private float spawnCounter;
 
     void Start()
     {
-        spawnTimer = 4;
+        spawnCounter = 0;
+        spawnTime = 2;
         mainCam = Camera.main;
         StartCoroutine(SetBoundries());
     }
@@ -28,7 +27,18 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        EnemySpawn();
+    }
+
+    private void EnemySpawn()
+    {
+        spawnCounter += Time.deltaTime;
+        if (spawnCounter >= spawnTime)
+        {
+            int randomEnemy = Random.Range(0, enemy.Length);
+            Instantiate(enemy[randomEnemy], new Vector3(Random.Range(maxLeft, maxRight), yPos, 0), Quaternion.identity);
+            spawnCounter = 0;
+        }
     }
 
     private IEnumerator SetBoundries()

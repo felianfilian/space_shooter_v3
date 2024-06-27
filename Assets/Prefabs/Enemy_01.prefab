@@ -364,7 +364,7 @@ MonoBehaviour:
   damage: 1
   health: 2
   speed: 2
-  shootInterval: 1
+  shootInterval: 2
   leftCanonSpawn: {fileID: 3380843628756019971}
   rightCanonSpawn: {fileID: 8315865448723690444}
   bullet: {fileID: 8910179282267094823, guid: 97712d980ded74641858a6a46468a670, type: 3}

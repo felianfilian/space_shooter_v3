@@ -31,10 +31,9 @@ public class Enemy02: Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerStats player = collision.GetComponent<PlayerStats>();
-            player.PlayerDamage(damage);
+            collision.GetComponent<PlayerStats>().PlayerDamage(damage);
             Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
